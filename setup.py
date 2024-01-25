@@ -31,6 +31,8 @@ extras["nomujoco"] = list(
 )
 extras["all"] = list(set([item for group in extras.values() for item in group]))
 
+print(extras)
+
 setup(
     name="gym",
     version=VERSION,
@@ -45,7 +47,7 @@ setup(
         "numpy>=1.18.0",
         "cloudpickle>=1.2.0",
     ],
-    extras_require=extras,
+    # extras_require=extras,
     package_data={
         "gym": [
             "envs/mujoco/assets/*.xml",
